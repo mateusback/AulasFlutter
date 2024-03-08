@@ -31,3 +31,34 @@ void main() {
   print(
       'O projeto $projeto ${isprojetoAtivo ? 'está ativa' : 'está desativada'}, gerido por $gestorResponsavel, utiliza a tecnologia $tecnologia e $quantidadeDevs devs alocados');
 }
+
+//Parâmetros Posicionais
+bool validarTecnologiaProjeto(String nomeProjeto, String tecnologia) {
+  if (nomeProjeto == 'Tag' && tecnologia == 'C#') {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//Parametros opcionais e posicionais
+int quantidadeDevsProjeto(String nomeProjeto, String tecnologia,
+    [int quantidadeDevs = 0]) {
+  if (validarTecnologiaProjeto(nomeProjeto, tecnologia)) {
+    return 40;
+  } else {
+    return quantidadeDevs;
+  }
+}
+
+//Parametros nomeados
+bool validarGestorProjeto(
+    {required String nomeProjeto,
+    String tecnologia = 'C#',
+    String gestor = ''}) {
+  if (nomeProjeto == 'Tag' && gestor == 'Mateus') {
+    return true;
+  } else {
+    return false;
+  }
+}

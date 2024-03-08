@@ -31,7 +31,7 @@ void main() {
     } while (ehNotaValida);
   }
 
-  double media = calculaMedia(listaNotas);
+  double media = calculaMediaLista(listaNotas);
   print('$nome, sua média é: $media');
   print('${ehAprovado(media) ? 'Aprovado!' : 'Reprovado'}');
 }
@@ -43,7 +43,7 @@ int tenteConverter(String s) {
     return -1;
 }
 
-double calculaMedia(List<int> listaNotas) {
+double calculaMediaLista(List<int> listaNotas) {
   int somaTotal = 0;
   for (int i = 0; i < listaNotas.length; i++) {
     somaTotal += listaNotas[i];
